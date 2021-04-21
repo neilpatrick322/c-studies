@@ -14,11 +14,12 @@ void scan_inputs() {
         if (student_grade[i] < 0) {
             printf("Invalid input! Input should be greater than or equal to 0.");
             return 0;
-        }
-
-        if (student_grade[i] > 100) {
+        } else if (student_grade[i] > 100) {
             printf("Invalid input! Input should be less than or equal to 100.");
             return 0;
+        }
+        else {
+            printf("Ok input!");
         }
 
         students_total_grade = students_total_grade + student_grade[i];
