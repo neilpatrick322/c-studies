@@ -4,52 +4,28 @@ int main()
     // Initialize Variable
     double students_average = 0; // initial value is 0
     double students_total_grade = 0; // initial value is 0
-    unsigned int student0_grade = 0; // initial value is 0
-    unsigned int student1_grade = 0; // initial value is 0
-    unsigned int student2_grade = 0; // initial value is 0
-    unsigned int student3_grade = 0; // initial value is 0
-    unsigned int student4_grade = 0; // initial value is 0
-    unsigned int student5_grade = 0; // initial value is 0
-    unsigned int student6_grade = 0; // initial value is 0
-    unsigned int student7_grade = 0; // initial value is 0
-    unsigned int student8_grade = 0; // initial value is 0
-    unsigned int student9_grade = 0; // initial value is 0
-
+    int student_grade[10]; // access from [0] --> [9]
 
     // Get Inputs
-    printf("Enter student1 grade(0 to 100) and then press Enter:\n");
-    scanf_s("%d", &student0_grade);
-    printf("Enter student2 grade(0 to 100) and then press Enter:\n");
-    scanf_s("%d", &student1_grade);
-    printf("Enter student3 grade(0 to 100) and then press Enter:\n");
-    scanf_s("%d", &student2_grade);
-    printf("Enter student4 grade(0 to 100) and then press Enter:\n");
-    scanf_s("%d", &student3_grade);
-    printf("Enter student5 grade(0 to 100) and then press Enter:\n");
-    scanf_s("%d", &student4_grade);
-    printf("Enter student6 grade(0 to 100) and then press Enter:\n");
-    scanf_s("%d", &student5_grade);
-    printf("Enter student7 grade(0 to 100) and then press Enter:\n");
-    scanf_s("%d", &student6_grade);
-    printf("Enter student8 grade(0 to 100) and then press Enter:\n");
-    scanf_s("%d", &student7_grade);
-    printf("Enter student9 grade(0 to 100) and then press Enter:\n");
-    scanf_s("%d", &student8_grade);
-    printf("Enter student10 grade(0 to 100) and then press Enter:\n");
-    scanf_s("%d", &student9_grade);
+    for (int i = 0; i < 10; i++) {
+        printf("Enter student%d grade(0 to 100) and then press Enter:\n", i+1);
+        scanf_s("%d", &student_grade[i]);
 
-    // Perform Calculation
-    students_total_grade = (double)student0_grade
-        + (double)student1_grade
-        + (double)student2_grade
-        + (double)student3_grade
-        + (double)student4_grade
-        + (double)student5_grade
-        + (double)student6_grade
-        + (double)student7_grade
-        + (double)student8_grade
-        + (double)student9_grade;
-    students_average = (double)students_total_grade / 10;
+        if (student_grade[i] < 0) {
+            printf("Invalid input! Input should be greater than or equal to 0.");
+            return 0;
+        }
+
+        if (student_grade[i] > 100) {
+            printf("Invalid input! Input should be less than or equal to 100.");
+            return 0;
+        }
+
+        students_total_grade = students_total_grade + student_grade[i];
+    }
+
+    // Calculate
+    students_average = students_total_grade / 10;
 
     // Present Output;
     printf("Students total grade %g\n", students_total_grade);
