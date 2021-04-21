@@ -17,25 +17,25 @@ int main()
 
 
     // Get Inputs
-    printf("Enter student0 grade and then press Enter:\n");
+    printf("Enter student1 grade(0 to 100) and then press Enter:\n");
     scanf_s("%d", &student0_grade);
-    printf("Enter student1 grade and then press Enter:\n");
+    printf("Enter student2 grade(0 to 100) and then press Enter:\n");
     scanf_s("%d", &student1_grade);
-    printf("Enter student2 grade and then press Enter:\n");
+    printf("Enter student3 grade(0 to 100) and then press Enter:\n");
     scanf_s("%d", &student2_grade);
-    printf("Enter student3 grade and then press Enter:\n");
+    printf("Enter student4 grade(0 to 100) and then press Enter:\n");
     scanf_s("%d", &student3_grade);
-    printf("Enter student4 grade and then press Enter:\n");
+    printf("Enter student5 grade(0 to 100) and then press Enter:\n");
     scanf_s("%d", &student4_grade);
-    printf("Enter student5 grade and then press Enter:\n");
+    printf("Enter student6 grade(0 to 100) and then press Enter:\n");
     scanf_s("%d", &student5_grade);
-    printf("Enter student6 grade and then press Enter:\n");
+    printf("Enter student7 grade(0 to 100) and then press Enter:\n");
     scanf_s("%d", &student6_grade);
-    printf("Enter student7 grade and then press Enter:\n");
+    printf("Enter student8 grade(0 to 100) and then press Enter:\n");
     scanf_s("%d", &student7_grade);
-    printf("Enter student8 grade and then press Enter:\n");
+    printf("Enter student9 grade(0 to 100) and then press Enter:\n");
     scanf_s("%d", &student8_grade);
-    printf("Enter student9 grade and then press Enter:\n");
+    printf("Enter student10 grade(0 to 100) and then press Enter:\n");
     scanf_s("%d", &student9_grade);
 
     // Perform Calculation
