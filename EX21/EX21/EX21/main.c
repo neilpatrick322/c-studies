@@ -9,7 +9,7 @@ int main()
    
 
 
-    fp = fopen("prime.txt", "w");
+    fp = fopen("prime numbers.txt", "w");
     if (fp == NULL)
     {
         printf("Error!");
@@ -19,7 +19,6 @@ int main()
     printf("\nEnter number : ");
     scanf_s("%d", &lim_up);
 
-    printf("\nPRIME NUMBERS less than %d are : \n", lim_up);
 
     for (n = 1; n < lim_up; n++)
     {
@@ -31,10 +30,12 @@ int main()
                 break;
             }
         if (prime)
+        {
             printf(" %d ", n);
-    }
-    fprintf(fp," prime numbers : %d ", n);
 
+            fprintf(fp, " prime numbers : %d \n ", n);
+        }
+    }
     printf("\n Details successfully written to the file\n\n");
 
 
